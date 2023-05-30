@@ -17,6 +17,8 @@ config.git = {
   content_tag_latest: "1.1.0",
 };
 
+config.app_data.output_path = "./app_data";
+
 config.app_config.APP_LANGUAGES.default = "gb_en";
 config.app_config.APP_SIDEMENU_DEFAULTS.title = "FacilitatorApp";
 config.app_config.APP_HEADER_DEFAULTS.title = "FacilitatorApp";
