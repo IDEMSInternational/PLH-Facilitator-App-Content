@@ -12,6 +12,11 @@ config.google_drive = {
   assets_folder_id: "1KcHDI7O4o2_FZ_YlXsz-8OqN3ehsfdVf",
 };
 
+config.git = {
+  content_repo: "https://github.com/IDEMSInternational/plh-facilitator-app-content.git",
+  content_tag_latest: "1.1.0",
+};
+
 config.app_config.APP_LANGUAGES.default = "gb_en";
 config.app_config.APP_SIDEMENU_DEFAULTS.title = "FacilitatorApp";
 config.app_config.APP_HEADER_DEFAULTS.title = "FacilitatorApp";
