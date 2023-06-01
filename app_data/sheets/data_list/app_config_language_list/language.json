@@ -9,24 +9,24 @@
       "id": "gb_en",
       "country_code": "gb",
       "country_label": "United Kingdom",
-      "country_icon": "i18n/flags/gb.svg",
+      "country_icon": "images/flags/gb.svg",
       "language_code": "en",
       "language_label": "English",
       "name": "gb_en",
       "text": "English",
-      "image": "i18n/flags/gb.svg"
+      "image": "images/flags/gb.svg"
     },
     {
       "id": "my_ms",
       "country_code": "my",
       "country_label": "Malaysia",
-      "country_icon": "i18n/flags/my.svg",
+      "country_icon": "images/flags/my.svg",
       "language_code": "ms",
       "language_label": "Malay",
       "name": "my_ms",
       "text": "Malay",
-      "image": "i18n/flags/my.svg"
+      "image": "images/flags/my.svg"
     }
   ],
-  "_xlsxPath": "data_lists/language_data.xlsx"
+  "_xlsxPath": "data/language_data.xlsx"
 }

@@ -5,22 +5,40 @@
       "flow_name": "language",
       "data_list_name": "language",
       "flow_subtype": "app_config_language_list",
-      "_xlsxPath": "data_lists/language_data.xlsx"
+      "_xlsxPath": "data/language_data.xlsx"
     },
     "app_section_data": {
       "flow_type": "data_list",
       "flow_name": "app_section_data",
       "data_list_name": "app_section",
-      "_xlsxPath": "data_lists/navigation_data.xlsx"
+      "_xlsxPath": "data/navigation_data.xlsx"
+    },
+    "article_data": {
+      "flow_type": "data_list",
+      "flow_name": "article_data",
+      "data_list_name": "article",
+      "_xlsxPath": "data/manual_data.xlsx"
+    },
+    "goal_data": {
+      "flow_type": "data_list",
+      "flow_name": "goal_data",
+      "data_list_name": "goal",
+      "_xlsxPath": "data/manual_data.xlsx"
     },
     "number_data": {
       "flow_type": "data_list",
       "flow_name": "number_data",
       "data_list_name": "number",
-      "_xlsxPath": "data_lists/navigation_data.xlsx"
+      "_xlsxPath": "data/navigation_data.xlsx"
     }
   },
-  "global": {},
+  "global": {
+    "app_menu_global": {
+      "flow_type": "global",
+      "flow_name": "app_menu_global",
+      "_xlsxPath": "data/navigation_data.xlsx"
+    }
+  },
   "template": {
     "app_menu": {
       "flow_type": "template",
@@ -31,6 +49,21 @@
       "flow_type": "template",
       "flow_name": "app_update_complete",
       "_xlsxPath": "templates/app_update.xlsx"
+    },
+    "article": {
+      "flow_type": "template",
+      "flow_name": "article",
+      "_xlsxPath": "templates/manual.xlsx"
+    },
+    "article_box": {
+      "flow_type": "template",
+      "flow_name": "article_box",
+      "_xlsxPath": "templates/manual.xlsx"
+    },
+    "data_collection": {
+      "flow_type": "template",
+      "flow_name": "data_collection",
+      "_xlsxPath": "templates/navigation.xlsx"
     },
     "feature_feedback_debug": {
       "flow_type": "template",
@@ -58,12 +91,17 @@
     "home_screen": {
       "flow_type": "template",
       "flow_name": "home_screen",
-      "_xlsxPath": "templates/navigation.xlsx"
+      "_xlsxPath": "templates/manual.xlsx"
     },
     "language_select": {
       "flow_type": "template",
       "flow_name": "language_select",
       "_xlsxPath": "templates/settings.xlsx"
+    },
+    "messages": {
+      "flow_type": "template",
+      "flow_name": "messages",
+      "_xlsxPath": "templates/navigation.xlsx"
     }
   },
   "tour": {},

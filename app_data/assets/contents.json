@@ -1,10 +1,42 @@
 {
-  "i8n/flags/gb.svg": {
+  "images/flags/gb.svg": {
     "md5Checksum": "fcfef6780b36bef537381474df9d0be9",
     "size_kb": 0.5
   },
-  "i8n/flags/my.svg": {
+  "images/flags/my.svg": {
     "md5Checksum": "c1d190c31dd3f86046d695f0aeedcd34",
     "size_kb": 1.4
+  },
+  "images/icons/bar_chart_white.svg": {
+    "md5Checksum": "8451f25924b358984ca7e74206548a8b",
+    "size_kb": 1.5
+  },
+  "images/icons/book_white.svg": {
+    "md5Checksum": "98e454cf2c7fc325d1feb722b3eabc44",
+    "size_kb": 1.5
+  },
+  "images/icons/globe_blue.svg": {
+    "md5Checksum": "17709dbf6ff432c362ac51477203d44a",
+    "size_kb": 3.9
+  },
+  "images/icons/heart_blue.svg": {
+    "md5Checksum": "88d5bd5d99c20bd6ecfe5790f285fc0c",
+    "size_kb": 1.4
+  },
+  "images/icons/leaf_blue.svg": {
+    "md5Checksum": "21c6e54960599fdda6e4d58c3337b541",
+    "size_kb": 1.7
+  },
+  "images/icons/paper_plane_white.svg": {
+    "md5Checksum": "2543ae3bac7582aa96103aadc372e175",
+    "size_kb": 1.4
+  },
+  "images/icons/reader_blue.svg": {
+    "md5Checksum": "841a27e6e013d797d2bcf20391632cee",
+    "size_kb": 1.4
+  },
+  "images/icons/school_blue.svg": {
+    "md5Checksum": "bc87b2ae05c7c762ca7673657c0efb56",
+    "size_kb": 1.6
   }
 }
