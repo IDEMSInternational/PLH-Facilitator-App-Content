@@ -46,7 +46,7 @@
     {
       "type": "button",
       "name": "button_open_feedback",
-      "value": "@global.feedback",
+      "value": "Open feedback",
       "_translations": {
         "value": {}
       },
@@ -73,14 +73,6 @@
       "condition": "!@fields._feedback_sidebar_open",
       "_nested_name": "button_open_feedback",
       "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@global.feedback",
-            "matchedExpression": "@global.feedback",
-            "type": "global",
-            "fieldName": "feedback"
-          }
-        ],
         "condition": [
           {
             "fullExpression": "!@fields._feedback_sidebar_open",
@@ -91,9 +83,6 @@
         ]
       },
       "_dynamicDependencies": {
-        "@global.feedback": [
-          "value"
-        ],
         "!@fields._feedback_sidebar_open": [
           "condition"
         ]
@@ -102,7 +91,7 @@
     {
       "type": "button",
       "name": "button_close_feedback",
-      "value": "@global.feedback",
+      "value": "Close feedback",
       "_translations": {
         "value": {}
       },
@@ -129,14 +118,6 @@
       "condition": "@fields._feedback_sidebar_open",
       "_nested_name": "button_close_feedback",
       "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@global.feedback",
-            "matchedExpression": "@global.feedback",
-            "type": "global",
-            "fieldName": "feedback"
-          }
-        ],
         "condition": [
           {
             "fullExpression": "@fields._feedback_sidebar_open",
@@ -147,9 +128,6 @@
         ]
       },
       "_dynamicDependencies": {
-        "@global.feedback": [
-          "value"
-        ],
         "@fields._feedback_sidebar_open": [
           "condition"
         ]
