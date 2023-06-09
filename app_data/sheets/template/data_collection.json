@@ -4,65 +4,21 @@
   "status": "released",
   "rows": [
     {
-      "type": "display_group",
-      "name": "dg_header",
+      "type": "template",
+      "name": "app_section_header",
+      "value": "app_section_header",
       "rows": [
         {
-          "type": "title",
-          "name": "title",
-          "value": "@data.app_section.data_collection.title",
+          "name": "app_section_id",
+          "value": "data_collection",
           "_translations": {
             "value": {}
           },
-          "style_list": [
-            "flex:4"
-          ],
-          "_nested_name": "dg_header.title",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@data.app_section.data_collection.title",
-                "matchedExpression": "@data.app_section.data_collection.title",
-                "type": "data",
-                "fieldName": "app_section"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@data.app_section.data_collection.title": [
-              "value"
-            ]
-          }
-        },
-        {
-          "type": "image",
-          "name": "image",
-          "value": "@data.app_section.data_collection.icon_asset",
-          "_translations": {
-            "value": {}
-          },
-          "style_list": [
-            "flex:1"
-          ],
-          "_nested_name": "dg_header.image",
-          "_dynamicFields": {
-            "value": [
-              {
-                "fullExpression": "@data.app_section.data_collection.icon_asset",
-                "matchedExpression": "@data.app_section.data_collection.icon_asset",
-                "type": "data",
-                "fieldName": "app_section"
-              }
-            ]
-          },
-          "_dynamicDependencies": {
-            "@data.app_section.data_collection.icon_asset": [
-              "value"
-            ]
-          }
+          "type": "set_variable",
+          "_nested_name": "app_section_header.app_section_id"
         }
       ],
-      "_nested_name": "dg_header"
+      "_nested_name": "app_section_header"
     }
   ],
   "_xlsxPath": "templates/navigation.xlsx"

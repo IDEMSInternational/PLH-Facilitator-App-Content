@@ -1,0 +1,32 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile_id",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "title",
+      "value": "@global.profile_id",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "title",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.profile_id",
+            "matchedExpression": "@global.profile_id",
+            "type": "global",
+            "fieldName": "profile_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.profile_id": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/profile.xlsx"
+}

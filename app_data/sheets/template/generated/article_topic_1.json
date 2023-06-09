@@ -1,0 +1,24 @@
+{
+  "flow_name": "article_topic_1",
+  "flow_subtype": "generated",
+  "flow_type": "template",
+  "rows": [
+    {
+      "type": "template",
+      "name": "article",
+      "value": "article",
+      "rows": [
+        {
+          "name": "article_id",
+          "value": "topic_1",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "article.article_id"
+        }
+      ],
+      "_nested_name": "article"
+    }
+  ]
+}

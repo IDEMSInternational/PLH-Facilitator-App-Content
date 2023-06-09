@@ -8,7 +8,7 @@
       "value": [
         "image: @data.app_section.data_collection.icon_asset | target_template: @data.app_section.data_collection.template",
         "image: @data.app_section.manual.icon_asset | target_template: @data.app_section.manual.template",
-        "image: @data.app_section.messages.icon_asset | target_template: @data.app_section.messages.template"
+        "image: @data.app_section.profile.icon_asset | target_template: @data.app_section.profile.template"
       ],
       "type": "set_variable",
       "_nested_name": "button_list",
@@ -44,14 +44,14 @@
           ],
           "2": [
             {
-              "fullExpression": "image: @data.app_section.messages.icon_asset | target_template: @data.app_section.messages.template",
-              "matchedExpression": "@data.app_section.messages.icon_asset",
+              "fullExpression": "image: @data.app_section.profile.icon_asset | target_template: @data.app_section.profile.template",
+              "matchedExpression": "@data.app_section.profile.icon_asset",
               "type": "data",
               "fieldName": "app_section"
             },
             {
-              "fullExpression": "image: @data.app_section.messages.icon_asset | target_template: @data.app_section.messages.template",
-              "matchedExpression": "@data.app_section.messages.template",
+              "fullExpression": "image: @data.app_section.profile.icon_asset | target_template: @data.app_section.profile.template",
+              "matchedExpression": "@data.app_section.profile.template",
               "type": "data",
               "fieldName": "app_section"
             }
@@ -71,10 +71,10 @@
         "@data.app_section.manual.template": [
           "value.1"
         ],
-        "@data.app_section.messages.icon_asset": [
+        "@data.app_section.profile.icon_asset": [
           "value.2"
         ],
-        "@data.app_section.messages.template": [
+        "@data.app_section.profile.template": [
           "value.2"
         ]
       }

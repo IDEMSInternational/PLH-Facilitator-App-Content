@@ -1,0 +1,16 @@
+{
+  "flow_name": "help_data_collection",
+  "flow_subtype": "generated",
+  "flow_type": "template",
+  "rows": [
+    {
+      "type": "text",
+      "name": "text",
+      "value": "Explanation of what this section is for.",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text"
+    }
+  ]
+}
