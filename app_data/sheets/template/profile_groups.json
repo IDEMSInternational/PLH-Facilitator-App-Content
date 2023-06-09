@@ -1,0 +1,32 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile_groups",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "title",
+      "value": "@global.profile_groups",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "title",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.profile_groups",
+            "matchedExpression": "@global.profile_groups",
+            "type": "global",
+            "fieldName": "profile_groups"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.profile_groups": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/profile.xlsx"
+}

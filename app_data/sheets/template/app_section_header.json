@@ -1,0 +1,164 @@
+{
+  "flow_type": "template",
+  "flow_name": "app_section_header",
+  "status": "released",
+  "rows": [
+    {
+      "name": "app_section_id",
+      "value": "data_collection",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "app_section_id"
+    },
+    {
+      "name": "concat_app_section_id",
+      "value": "app_section.@local.app_section_id",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "concat_app_section_id",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "app_section.@local.app_section_id",
+            "matchedExpression": "@local.app_section_id",
+            "type": "local",
+            "fieldName": "app_section_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.app_section_id": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "app_section_data",
+      "value": "@data.@local.concat_app_section_id",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "app_section_data",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@data.@local.concat_app_section_id",
+            "matchedExpression": "@local.concat_app_section_id",
+            "type": "local",
+            "fieldName": "concat_app_section_id"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.concat_app_section_id": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "name": "dg_header",
+      "rows": [
+        {
+          "type": "title",
+          "name": "title",
+          "value": "@local.app_section_data.title",
+          "_translations": {
+            "value": {}
+          },
+          "style_list": [
+            "flex:4"
+          ],
+          "_nested_name": "dg_header.title",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.app_section_data.title",
+                "matchedExpression": "@local.app_section_data.title",
+                "type": "local",
+                "fieldName": "app_section_data"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.app_section_data.title": [
+              "value"
+            ]
+          }
+        },
+        {
+          "type": "display_group",
+          "name": "dg_help",
+          "rows": [
+            {
+              "type": "round_button",
+              "name": "help_button",
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "pop_up",
+                  "args": [
+                    "help_@local.app_section_id"
+                  ],
+                  "_raw": "click | pop_up: help_@local.app_section_id",
+                  "_cleaned": "click | pop_up: help_@local.app_section_id"
+                }
+              ],
+              "parameter_list": {
+                "icon_src": "help"
+              },
+              "_nested_name": "dg_header.dg_help.help_button",
+              "_dynamicFields": {
+                "action_list": {
+                  "0": {
+                    "args": {
+                      "0": [
+                        {
+                          "fullExpression": "help_@local.app_section_id",
+                          "matchedExpression": "@local.app_section_id",
+                          "type": "local",
+                          "fieldName": "app_section_id"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | pop_up: help_@local.app_section_id",
+                        "matchedExpression": "@local.app_section_id",
+                        "type": "local",
+                        "fieldName": "app_section_id"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | pop_up: help_@local.app_section_id",
+                        "matchedExpression": "@local.app_section_id",
+                        "type": "local",
+                        "fieldName": "app_section_id"
+                      }
+                    ]
+                  }
+                }
+              },
+              "_dynamicDependencies": {
+                "@local.app_section_id": [
+                  "action_list.0.args.0",
+                  "action_list.0._raw",
+                  "action_list.0._cleaned"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "dg_header.dg_help"
+        }
+      ],
+      "_nested_name": "dg_header"
+    }
+  ],
+  "_xlsxPath": "templates/navigation.xlsx"
+}

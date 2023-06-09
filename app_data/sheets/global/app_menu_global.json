@@ -10,6 +10,30 @@
       "_translations": {
         "value": {}
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "share_groups",
+      "value": "parent groups",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "profile_groups",
+      "value": "My Parent Groups",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "profile_id",
+      "value": "My Facilitator ID",
+      "_translations": {
+        "value": {}
+      }
     }
   ],
   "_xlsxPath": "data/navigation_data.xlsx"

@@ -17,13 +17,7 @@
       "flow_type": "data_list",
       "flow_name": "article_data",
       "data_list_name": "article",
-      "_xlsxPath": "data/manual_data.xlsx"
-    },
-    "goal_data": {
-      "flow_type": "data_list",
-      "flow_name": "goal_data",
-      "data_list_name": "goal",
-      "_xlsxPath": "data/manual_data.xlsx"
+      "_xlsxPath": "data/article_data.xlsx"
     },
     "number_data": {
       "flow_type": "data_list",
@@ -32,17 +26,52 @@
       "_xlsxPath": "data/navigation_data.xlsx"
     }
   },
+  "data_pipe": {},
+  "generator": {
+    "article_generator": {
+      "flow_type": "generator",
+      "flow_name": "article_generator",
+      "parameter_list": {
+        "input_data_list": "article_data",
+        "output_flow_name": "article_@gen.id",
+        "output_flow_type": "template",
+        "output_flow_subtype": "generated"
+      },
+      "_xlsxPath": "templates/articles.xlsx"
+    },
+    "help_generator": {
+      "flow_type": "generator",
+      "flow_name": "help_generator",
+      "parameter_list": {
+        "input_data_list": "app_section_data",
+        "output_flow_name": "help_@gen.id",
+        "output_flow_type": "template",
+        "output_flow_subtype": "generated"
+      },
+      "_xlsxPath": "templates/navigation.xlsx"
+    }
+  },
   "global": {
     "app_menu_global": {
       "flow_type": "global",
       "flow_name": "app_menu_global",
       "_xlsxPath": "data/navigation_data.xlsx"
+    },
+    "article_global": {
+      "flow_type": "global",
+      "flow_name": "article_global",
+      "_xlsxPath": "data/article_data.xlsx"
     }
   },
   "template": {
     "app_menu": {
       "flow_type": "template",
       "flow_name": "app_menu",
+      "_xlsxPath": "templates/navigation.xlsx"
+    },
+    "app_section_header": {
+      "flow_type": "template",
+      "flow_name": "app_section_header",
       "_xlsxPath": "templates/navigation.xlsx"
     },
     "app_update_complete": {
@@ -53,12 +82,7 @@
     "article": {
       "flow_type": "template",
       "flow_name": "article",
-      "_xlsxPath": "templates/manual.xlsx"
-    },
-    "article_box": {
-      "flow_type": "template",
-      "flow_name": "article_box",
-      "_xlsxPath": "templates/manual.xlsx"
+      "_xlsxPath": "templates/articles.xlsx"
     },
     "data_collection": {
       "flow_type": "template",
@@ -88,22 +112,91 @@
       "flow_name": "footer",
       "_xlsxPath": "templates/footer.xlsx"
     },
+    "article_topic_1": {
+      "flow_name": "article_topic_1",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "article_topic_2": {
+      "flow_name": "article_topic_2",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "article_topic_3": {
+      "flow_name": "article_topic_3",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "article_topic_4": {
+      "flow_name": "article_topic_4",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "article_topic_5": {
+      "flow_name": "article_topic_5",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "article_topic_6": {
+      "flow_name": "article_topic_6",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "article_topic_7": {
+      "flow_name": "article_topic_7",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "article_topic_8": {
+      "flow_name": "article_topic_8",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "help_data_collection": {
+      "flow_name": "help_data_collection",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "help_manual": {
+      "flow_name": "help_manual",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
+    "help_profile": {
+      "flow_name": "help_profile",
+      "flow_subtype": "generated",
+      "flow_type": "template"
+    },
     "home_screen": {
       "flow_type": "template",
       "flow_name": "home_screen",
-      "_xlsxPath": "templates/manual.xlsx"
+      "_xlsxPath": "templates/navigation.xlsx"
     },
     "language_select": {
       "flow_type": "template",
       "flow_name": "language_select",
       "_xlsxPath": "templates/settings.xlsx"
     },
-    "messages": {
+    "message_box": {
       "flow_type": "template",
-      "flow_name": "messages",
+      "flow_name": "message_box",
+      "_xlsxPath": "templates/articles.xlsx"
+    },
+    "profile": {
+      "flow_type": "template",
+      "flow_name": "profile",
       "_xlsxPath": "templates/navigation.xlsx"
+    },
+    "profile_groups": {
+      "flow_type": "template",
+      "flow_name": "profile_groups",
+      "_xlsxPath": "templates/profile.xlsx"
+    },
+    "profile_id": {
+      "flow_type": "template",
+      "flow_name": "profile_id",
+      "_xlsxPath": "templates/profile.xlsx"
     }
   },
-  "tour": {},
-  "data_pipe": {}
+  "tour": {}
 }
