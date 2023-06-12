@@ -5,6 +5,14 @@
   "rows": [
     {
       "type": "declare_global_constant",
+      "name": "app_name",
+      "value": "KEMAS Facilitator App",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
       "name": "language",
       "value": "Language",
       "_translations": {
@@ -15,6 +23,14 @@
       "type": "declare_global_constant",
       "name": "share_groups",
       "value": "parent groups",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "share_medium",
+      "value": "WhatsApp",
       "_translations": {
         "value": {}
       }
