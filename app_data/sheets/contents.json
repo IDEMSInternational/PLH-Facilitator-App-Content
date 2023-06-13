@@ -167,6 +167,16 @@
       "flow_subtype": "generated",
       "flow_type": "template"
     },
+    "help_button": {
+      "flow_type": "template",
+      "flow_name": "help_button",
+      "_xlsxPath": "templates/navigation.xlsx"
+    },
+    "help_user_name": {
+      "flow_type": "template",
+      "flow_name": "help_user_name",
+      "_xlsxPath": "templates/profile.xlsx"
+    },
     "home_screen": {
       "flow_type": "template",
       "flow_name": "home_screen",
@@ -182,10 +192,25 @@
       "flow_name": "message_box",
       "_xlsxPath": "templates/articles.xlsx"
     },
+    "odk_form": {
+      "flow_type": "template",
+      "flow_name": "odk_form",
+      "_xlsxPath": "templates/navigation.xlsx"
+    },
+    "odk_form_en": {
+      "flow_type": "template",
+      "flow_name": "odk_form_en",
+      "_xlsxPath": "templates/navigation.xlsx"
+    },
     "profile": {
       "flow_type": "template",
       "flow_name": "profile",
       "_xlsxPath": "templates/navigation.xlsx"
+    },
+    "profile_about": {
+      "flow_type": "template",
+      "flow_name": "profile_about",
+      "_xlsxPath": "templates/profile.xlsx"
     },
     "profile_groups": {
       "flow_type": "template",
@@ -195,6 +220,11 @@
     "profile_id": {
       "flow_type": "template",
       "flow_name": "profile_id",
+      "_xlsxPath": "templates/profile.xlsx"
+    },
+    "profile_package": {
+      "flow_type": "template",
+      "flow_name": "profile_package",
       "_xlsxPath": "templates/profile.xlsx"
     }
   },

@@ -22,6 +22,41 @@
     },
     {
       "type": "button",
+      "name": "button_about",
+      "value": "@global.profile_about",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "profile_about"
+          ],
+          "_raw": "click | go_to: profile_about",
+          "_cleaned": "click | go_to: profile_about"
+        }
+      ],
+      "_nested_name": "button_about",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.profile_about",
+            "matchedExpression": "@global.profile_about",
+            "type": "global",
+            "fieldName": "profile_about"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.profile_about": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "button",
       "name": "button_id",
       "value": "@global.profile_id",
       "_translations": {
@@ -86,6 +121,41 @@
       },
       "_dynamicDependencies": {
         "@global.profile_groups": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "name": "button_package",
+      "value": "@global.profile_package",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "click",
+          "action_id": "go_to",
+          "args": [
+            "profile_package"
+          ],
+          "_raw": "click | go_to: profile_package",
+          "_cleaned": "click | go_to: profile_package"
+        }
+      ],
+      "_nested_name": "button_package",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.profile_package",
+            "matchedExpression": "@global.profile_package",
+            "type": "global",
+            "fieldName": "profile_package"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.profile_package": [
           "value"
         ]
       }
