@@ -1,0 +1,75 @@
+{
+  "flow_type": "template",
+  "flow_name": "odk_form_en",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "title",
+      "value": "Sample ODK form",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "title"
+    },
+    {
+      "name": "form_asset_input",
+      "value": "odk_forms/eplh_pilot_facilitator_weekly_survey_combined_en.json",
+      "_translations": {
+        "value": {}
+      },
+      "type": "set_variable",
+      "_nested_name": "form_asset_input"
+    },
+    {
+      "type": "odk_form",
+      "name": "form_1",
+      "parameter_list": {
+        "form_asset": "@local.form_asset_input"
+      },
+      "_nested_name": "form_1",
+      "_dynamicFields": {
+        "parameter_list": {
+          "form_asset": [
+            {
+              "fullExpression": "@local.form_asset_input",
+              "matchedExpression": "@local.form_asset_input",
+              "type": "local",
+              "fieldName": "form_asset_input"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.form_asset_input": [
+          "parameter_list.form_asset"
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "form_1_values",
+      "value": "Form values: @local.form_1",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "form_1_values",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "Form values: @local.form_1",
+            "matchedExpression": "@local.form_1",
+            "type": "local",
+            "fieldName": "form_1"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@local.form_1": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/navigation.xlsx"
+}

@@ -72,7 +72,7 @@
             "value": {}
           },
           "style_list": [
-            "flex:4"
+            "flex:1"
           ],
           "_nested_name": "dg_header.title",
           "_dynamicFields": {
@@ -92,69 +92,36 @@
           }
         },
         {
-          "type": "display_group",
-          "name": "dg_help",
+          "type": "template",
+          "name": "help_button",
+          "value": "help_button",
           "rows": [
             {
-              "type": "round_button",
-              "name": "help_button",
-              "action_list": [
-                {
-                  "trigger": "click",
-                  "action_id": "pop_up",
-                  "args": [
-                    "help_@local.app_section_id"
-                  ],
-                  "_raw": "click | pop_up: help_@local.app_section_id",
-                  "_cleaned": "click | pop_up: help_@local.app_section_id"
-                }
-              ],
-              "parameter_list": {
-                "icon_src": "help"
+              "name": "help_template",
+              "value": "help_@local.app_section_id",
+              "_translations": {
+                "value": {}
               },
-              "_nested_name": "dg_header.dg_help.help_button",
+              "type": "set_variable",
+              "_nested_name": "dg_header.help_button.help_template",
               "_dynamicFields": {
-                "action_list": {
-                  "0": {
-                    "args": {
-                      "0": [
-                        {
-                          "fullExpression": "help_@local.app_section_id",
-                          "matchedExpression": "@local.app_section_id",
-                          "type": "local",
-                          "fieldName": "app_section_id"
-                        }
-                      ]
-                    },
-                    "_raw": [
-                      {
-                        "fullExpression": "click | pop_up: help_@local.app_section_id",
-                        "matchedExpression": "@local.app_section_id",
-                        "type": "local",
-                        "fieldName": "app_section_id"
-                      }
-                    ],
-                    "_cleaned": [
-                      {
-                        "fullExpression": "click | pop_up: help_@local.app_section_id",
-                        "matchedExpression": "@local.app_section_id",
-                        "type": "local",
-                        "fieldName": "app_section_id"
-                      }
-                    ]
+                "value": [
+                  {
+                    "fullExpression": "help_@local.app_section_id",
+                    "matchedExpression": "@local.app_section_id",
+                    "type": "local",
+                    "fieldName": "app_section_id"
                   }
-                }
+                ]
               },
               "_dynamicDependencies": {
                 "@local.app_section_id": [
-                  "action_list.0.args.0",
-                  "action_list.0._raw",
-                  "action_list.0._cleaned"
+                  "value"
                 ]
               }
             }
           ],
-          "_nested_name": "dg_header.dg_help"
+          "_nested_name": "dg_header.help_button"
         }
       ],
       "_nested_name": "dg_header"

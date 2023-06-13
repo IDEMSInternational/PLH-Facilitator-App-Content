@@ -1,0 +1,116 @@
+{
+  "flow_type": "template",
+  "flow_name": "profile_about",
+  "status": "released",
+  "rows": [
+    {
+      "type": "title",
+      "name": "title",
+      "value": "@global.profile_about",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "title",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.profile_about",
+            "matchedExpression": "@global.profile_about",
+            "type": "global",
+            "fieldName": "profile_about"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.profile_about": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "display_group",
+      "name": "dg_user_name_header",
+      "rows": [
+        {
+          "type": "text",
+          "name": "text_user_name",
+          "value": "Your name",
+          "_translations": {
+            "value": {}
+          },
+          "parameter_list": {
+            "style": "emphasised"
+          },
+          "style_list": [
+            "flex: 1"
+          ],
+          "_nested_name": "dg_user_name_header.text_user_name"
+        },
+        {
+          "type": "template",
+          "name": "help_button",
+          "value": "help_button",
+          "rows": [
+            {
+              "name": "help_template",
+              "value": "help_user_name",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "dg_user_name_header.help_button.help_template"
+            }
+          ],
+          "_nested_name": "dg_user_name_header.help_button"
+        }
+      ],
+      "_nested_name": "dg_user_name_header"
+    },
+    {
+      "type": "text_box",
+      "name": "text_box_name",
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "set_field",
+          "args": [
+            "user_name",
+            "this.value"
+          ],
+          "_raw": "changed | set_field: user_name: @local.text_box_name",
+          "_cleaned": "changed | set_field: user_name: @local.text_box_name"
+        }
+      ],
+      "_nested_name": "text_box_name",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "_raw": [
+              {
+                "fullExpression": "changed | set_field: user_name: @local.text_box_name",
+                "matchedExpression": "@local.text_box_name",
+                "type": "local",
+                "fieldName": "text_box_name"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "changed | set_field: user_name: @local.text_box_name",
+                "matchedExpression": "@local.text_box_name",
+                "type": "local",
+                "fieldName": "text_box_name"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.text_box_name": [
+          "action_list.0._raw",
+          "action_list.0._cleaned"
+        ]
+      }
+    }
+  ],
+  "_xlsxPath": "templates/profile.xlsx"
+}
