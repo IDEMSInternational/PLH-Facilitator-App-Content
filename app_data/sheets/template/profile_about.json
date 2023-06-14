@@ -4,71 +4,47 @@
   "status": "released",
   "rows": [
     {
-      "type": "title",
-      "name": "title",
-      "value": "@global.profile_about",
-      "_translations": {
-        "value": {}
-      },
-      "_nested_name": "title",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@global.profile_about",
-            "matchedExpression": "@global.profile_about",
-            "type": "global",
-            "fieldName": "profile_about"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@global.profile_about": [
-          "value"
-        ]
-      }
-    },
-    {
-      "type": "display_group",
-      "name": "dg_user_name_header",
+      "type": "template",
+      "name": "header",
+      "value": "section_header",
       "rows": [
         {
-          "type": "text",
-          "name": "text_user_name",
-          "value": "Your name",
+          "name": "section_id",
+          "value": "about",
           "_translations": {
             "value": {}
           },
-          "parameter_list": {
-            "style": "emphasised"
-          },
-          "style_list": [
-            "flex: 1"
-          ],
-          "_nested_name": "dg_user_name_header.text_user_name"
+          "type": "set_variable",
+          "_nested_name": "header.section_id"
         },
         {
-          "type": "template",
-          "name": "help_button",
-          "value": "help_button",
-          "rows": [
-            {
-              "name": "help_template",
-              "value": "help_user_name",
-              "_translations": {
-                "value": {}
-              },
-              "type": "set_variable",
-              "_nested_name": "dg_user_name_header.help_button.help_template"
-            }
-          ],
-          "_nested_name": "dg_user_name_header.help_button"
+          "name": "section_data",
+          "value": "profile_section",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "header.section_data"
         }
       ],
-      "_nested_name": "dg_user_name_header"
+      "_nested_name": "header"
+    },
+    {
+      "type": "text",
+      "name": "text_user_name",
+      "value": "Your name",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text_user_name"
     },
     {
       "type": "text_box",
       "name": "text_box_name",
+      "value": "@fields.user_name",
+      "_translations": {
+        "value": {}
+      },
       "action_list": [
         {
           "trigger": "changed",
@@ -83,6 +59,14 @@
       ],
       "_nested_name": "text_box_name",
       "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields.user_name",
+            "matchedExpression": "@fields.user_name",
+            "type": "fields",
+            "fieldName": "user_name"
+          }
+        ],
         "action_list": {
           "0": {
             "_raw": [
@@ -105,6 +89,9 @@
         }
       },
       "_dynamicDependencies": {
+        "@fields.user_name": [
+          "value"
+        ],
         "@local.text_box_name": [
           "action_list.0._raw",
           "action_list.0._cleaned"

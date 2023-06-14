@@ -7,7 +7,7 @@
     {
       "id": "data_collection",
       "title": "Attendance",
-      "icon_asset": "images/icons/bar_chart_white.svg",
+      "icon_asset": "images/icons/pencil_white.svg",
       "template": "data_collection",
       "description": "Whether meeting with your parents over @global.share_medium through a chat session or in-person, you'll want to report attendance using this form."
     },
@@ -21,7 +21,7 @@
     {
       "id": "profile",
       "title": "Profile",
-      "icon_asset": "images/icons/paper_plane_white.svg",
+      "icon_asset": "images/icons/person_white.svg",
       "template": "profile",
       "description": "Your profile provides your facilitator ID and is also where you can edit the list of parents attending your groups."
     }

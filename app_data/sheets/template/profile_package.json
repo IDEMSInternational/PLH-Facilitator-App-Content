@@ -4,26 +4,113 @@
   "status": "released",
   "rows": [
     {
-      "type": "title",
-      "name": "title",
-      "value": "@global.profile_package",
+      "type": "template",
+      "name": "header",
+      "value": "section_header",
+      "rows": [
+        {
+          "name": "section_id",
+          "value": "package",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "header.section_id"
+        },
+        {
+          "name": "section_data",
+          "value": "profile_section",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "header.section_data"
+        }
+      ],
+      "_nested_name": "header"
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "value": "Which of the following applies to you?",
       "_translations": {
         "value": {}
       },
-      "_nested_name": "title",
+      "_nested_name": "text"
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "radio_button_grid",
+      "value": "@fields.current_package",
+      "_translations": {
+        "value": {}
+      },
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "set_field",
+          "args": [
+            "current_package",
+            "this.value"
+          ],
+          "_raw": "changed | set_field: current_package: @local.radio_button_grid",
+          "_cleaned": "changed | set_field: current_package: @local.radio_button_grid"
+        }
+      ],
+      "parameter_list": {
+        "answer_list": "@data.package"
+      },
+      "_nested_name": "radio_button_grid",
       "_dynamicFields": {
         "value": [
           {
-            "fullExpression": "@global.profile_package",
-            "matchedExpression": "@global.profile_package",
-            "type": "global",
-            "fieldName": "profile_package"
+            "fullExpression": "@fields.current_package",
+            "matchedExpression": "@fields.current_package",
+            "type": "fields",
+            "fieldName": "current_package"
           }
-        ]
+        ],
+        "action_list": {
+          "0": {
+            "_raw": [
+              {
+                "fullExpression": "changed | set_field: current_package: @local.radio_button_grid",
+                "matchedExpression": "@local.radio_button_grid",
+                "type": "local",
+                "fieldName": "radio_button_grid"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "changed | set_field: current_package: @local.radio_button_grid",
+                "matchedExpression": "@local.radio_button_grid",
+                "type": "local",
+                "fieldName": "radio_button_grid"
+              }
+            ]
+          }
+        },
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@data.package",
+              "matchedExpression": "@data.package",
+              "type": "data",
+              "fieldName": "package"
+            }
+          ]
+        }
       },
       "_dynamicDependencies": {
-        "@global.profile_package": [
+        "@fields.current_package": [
           "value"
+        ],
+        "@local.radio_button_grid": [
+          "action_list.0._raw",
+          "action_list.0._cleaned"
+        ],
+        "@data.package": [
+          "parameter_list.answer_list"
         ]
       }
     }

@@ -6,7 +6,7 @@
     {
       "type": "declare_global_constant",
       "name": "app_name",
-      "value": "KEMAS Facilitator App",
+      "value": "KEMAS FacilitatorApp",
       "_translations": {
         "value": {}
       }
@@ -37,38 +37,6 @@
     },
     {
       "type": "declare_global_constant",
-      "name": "profile_about",
-      "value": "About you",
-      "_translations": {
-        "value": {}
-      }
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "profile_id",
-      "value": "Your Facilitator ID",
-      "_translations": {
-        "value": {}
-      }
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "profile_groups",
-      "value": "Your Parent Groups",
-      "_translations": {
-        "value": {}
-      }
-    },
-    {
-      "type": "declare_global_constant",
-      "name": "profile_package",
-      "value": "Your Content Package",
-      "_translations": {
-        "value": {}
-      }
-    },
-    {
-      "type": "declare_global_constant",
       "name": "user_name_default",
       "value": "[INSERT NAME]",
       "_translations": {
@@ -84,9 +52,9 @@
       }
     },
     {
-      "type": "declare_global_constant",
-      "name": "help_user_name",
-      "value": "We will use this to personalise the messages for sharing with your @global.share_groups.",
+      "type": "declare_field_default",
+      "name": "current_package",
+      "value": "facilitator",
       "_translations": {
         "value": {}
       }

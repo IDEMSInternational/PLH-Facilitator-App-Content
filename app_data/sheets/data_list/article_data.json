@@ -17,7 +17,8 @@
       "question_2": "A parent cannot commit to the ground rules",
       "response_2": "Remove them from the group and notify @global.supervisor_name at @global.supervisor_contact",
       "title_short": "Week 1: Introductions",
-      "icon_asset": "images/icons/reader_blue.svg"
+      "icon_asset": "images/icons/reader_blue.svg",
+      "message_guidance_1": "Explain to the facilitator any relevant details, such as \"wait for parents to respond\"."
     },
     {
       "id": "topic_2",
@@ -34,7 +35,8 @@
       "question_2": "A parent cannot complete one-on-one time with their child this week.",
       "response_2": "That's okay! Parenting can be challenging and many obstacles can get in the way. Remember, your job isn't to solve their problems, but enable a conversation between parents to support one another. Here are some challenges and possible solutions you might share if other parents don't offer support: \n\n| Challenge                                                            | Possible solution                                                                              |\n|----------------------------------------------------------------------|------------------------------------------------------------------------------------------------|\n| I didn’t have enough time                                            | Find a chore to do together!                                                                   |\n| My child did not want to spend time with me.                         | Try finding something fun to do.                                                               |\n| All my child wanted to do is watch T.V. or play with a gadget        | Ask your child to show you something on the gadget.                                            |\n| My child wanted to do things I felt uncomfortable about              | Explain why you feel uncomfortable and suggest an alternative.                                 |\n| My child wanted to do activities that I could not do                 | Ask your child if you can watch!                                                               |\n| My child chose a competitive activity. I won and then they got angry | Suggest other activities or do an activity where you can be on the same team.                  |\n| My child had a tantrum at the end of One-on-One time                 | Be clear about how much time you have and warn your child when the time is coming to an end.   |\n| All my children wanted One-on-One Time at the same time:             | Think of a time when other children are not around or ask another adult to help with children. |",
       "title_short": "Week 2: One-on-One Time",
-      "icon_asset": "images/icons/reader_blue.svg"
+      "icon_asset": "images/icons/reader_blue.svg",
+      "message_guidance_1": "Explain to the facilitator any relevant details, such as \"wait for parents to respond\"."
     },
     {
       "id": "topic_3",
@@ -42,7 +44,7 @@
       "title": "Sharing Emotions",
       "introduction": "The primary objectives for this week are parents learning and practicing how to talk about their own and their children’s feelings. \n\nThe key building blocks for Talking about Emotions are Breathe, Share, Listen, Show, and Seek:\n\nBREATHE. Slowly. Pause. \nBefore you say anything, slowly breathe in and out. It will calm you and give you a chance to think.\n\nSHARE how you feel\nThis is hard. Many of us were told not to cry or show our feelings to our children. But take a deep breath and calmly tell them how you feel. They will understand better, and also learn from you how to deal with stress. \n\nLISTEN to your child.\nAllow your child to share their emotions. You can also reflect back what you them say to you. Accept that the feeling is okay, even if it is negative.\n\nSHOW them you care\nThis is also hard! Stress makes us focus on ourselves. But our children and teens need our support. Ask them how they feel. Listen to them and comfort them. Try a hug or say, ‘I understand.’ It can change everything.\n\nSEEK the positive\nCan you and your child think about ideas that might help? Can you do something positive together to take your mind off the stress?",
       "message_1": "Today’s parent tip is about helping your children to manage their feelings. Here are 5 tips about how to talk about emotions with your children:\n\nBREATHE to calm yourself before you start.\nSHARE how you feel. \nLISTEN to your child or teen. \nSHOW them you care. \nSEEK the positive.",
-      "message_2": "Why do you think helping your child share their emotions could be helpful for your child or teen?",
+      "message_2": "Why do you think helping your child share their emotions could be helpful for them?",
       "message_3": "Thanks for sharing your ideas! This week, practice talking to your children about their emotions during One-on-One Time and at other times during the week. Try to become more aware of your own emotions as you go about your day, too!",
       "faq_title": "Key Issues to Be Aware Of",
       "question_1": "Talking about emotions can be new",
@@ -52,37 +54,17 @@
       "question_3": "Accepting negative emotions",
       "response_3": "Negative emotions are just as normal as positive emotions! Some parents might feel disrespected when their children display negative emotions. This does not mean that parents are losing control or authority over their child. Parents should encourage children to be aware of their emotions by helping them to name emotions, and to talk about how they are experiencing their emotions as this will help them to regulate their emotions.",
       "title_short": "Week 3: Sharing Emotions",
-      "icon_asset": "images/icons/reader_blue.svg"
+      "icon_asset": "images/icons/reader_blue.svg",
+      "message_guidance_1": "Explain to the facilitator any relevant details, such as \"wait for parents to respond\"."
     },
     {
       "id": "topic_4",
       "number": 4,
-      "title_short": "Week 4: @row.title",
-      "icon_asset": "images/icons/reader_blue.svg"
-    },
-    {
-      "id": "topic_5",
-      "number": 5,
-      "title_short": "Week 5: @row.title",
-      "icon_asset": "images/icons/reader_blue.svg"
-    },
-    {
-      "id": "topic_6",
-      "number": 6,
-      "title_short": "Week 6: @row.title",
-      "icon_asset": "images/icons/reader_blue.svg"
-    },
-    {
-      "id": "topic_7",
-      "number": 7,
-      "title_short": "Week 7: @row.title",
-      "icon_asset": "images/icons/reader_blue.svg"
-    },
-    {
-      "id": "topic_8",
-      "number": 8,
-      "title_short": "Week 8: @row.title",
-      "icon_asset": "images/icons/reader_blue.svg"
+      "title": "Positive Discipline",
+      "introduction": "Here's my intro text\n1. This is my first item\n2. This is my second item\n3. Here's my third!\n- Now I switched to bullet points!",
+      "title_short": "Week 4: Positive Discipline",
+      "icon_asset": "images/icons/reader_blue.svg",
+      "message_guidance_1": "Explain to the facilitator any relevant details, such as \"wait for parents to respond\"."
     }
   ],
   "_xlsxPath": "data/article_data.xlsx"
