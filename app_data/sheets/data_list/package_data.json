@@ -1,0 +1,29 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "package_data",
+  "status": "released",
+  "data_list_name": "package",
+  "rows": [
+    {
+      "id": "facilitator",
+      "name": "facilitator",
+      "text": "I am a facilitator supporting a group of parents."
+    },
+    {
+      "id": "coach",
+      "name": "coach",
+      "text": "I am a coach supporting a group of facilitators."
+    },
+    {
+      "id": "parent_child",
+      "name": "parent_child",
+      "text": "I am a caregiver of a child (age 2-9)."
+    },
+    {
+      "id": "parent_teen",
+      "name": "parent_teen",
+      "text": "I am a caregiver of a teen (age 10-17)."
+    }
+  ],
+  "_xlsxPath": "data/navigation_data.xlsx"
+}

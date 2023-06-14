@@ -4,28 +4,30 @@
   "status": "released",
   "rows": [
     {
-      "type": "title",
-      "name": "title",
-      "value": "@global.profile_groups",
-      "_translations": {
-        "value": {}
-      },
-      "_nested_name": "title",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "@global.profile_groups",
-            "matchedExpression": "@global.profile_groups",
-            "type": "global",
-            "fieldName": "profile_groups"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@global.profile_groups": [
-          "value"
-        ]
-      }
+      "type": "template",
+      "name": "header",
+      "value": "section_header",
+      "rows": [
+        {
+          "name": "section_id",
+          "value": "groups",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "header.section_id"
+        },
+        {
+          "name": "section_data",
+          "value": "profile_section",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "header.section_data"
+        }
+      ],
+      "_nested_name": "header"
     }
   ],
   "_xlsxPath": "templates/profile.xlsx"

@@ -5,24 +5,34 @@
   "rows": [
     {
       "type": "template",
-      "name": "app_section_header",
-      "value": "app_section_header",
+      "name": "section_header",
+      "value": "section_header",
       "rows": [
         {
-          "name": "app_section_id",
+          "name": "section_id",
           "value": "manual",
           "_translations": {
             "value": {}
           },
           "type": "set_variable",
-          "_nested_name": "app_section_header.app_section_id"
+          "_nested_name": "section_header.section_id"
+        },
+        {
+          "name": "section_data",
+          "value": "app_section",
+          "_translations": {
+            "value": {}
+          },
+          "type": "set_variable",
+          "_nested_name": "section_header.section_data"
         }
       ],
-      "_nested_name": "app_section_header"
+      "_nested_name": "section_header"
     },
     {
       "type": "items",
       "value": "@data.article",
+      "condition": "@fields.current_package == \"facilitator\"",
       "rows": [
         {
           "type": "button",
@@ -126,11 +136,22 @@
             "type": "data",
             "fieldName": "article"
           }
+        ],
+        "condition": [
+          {
+            "fullExpression": "@fields.current_package == \"facilitator\"",
+            "matchedExpression": "@fields.current_package",
+            "type": "fields",
+            "fieldName": "current_package"
+          }
         ]
       },
       "_dynamicDependencies": {
         "@data.article": [
           "value"
+        ],
+        "@fields.current_package": [
+          "condition"
         ]
       }
     }
