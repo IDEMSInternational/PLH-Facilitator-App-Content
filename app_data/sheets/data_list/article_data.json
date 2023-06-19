@@ -62,7 +62,7 @@
       "number": 4,
       "title": "Redirecting Misbehaviours",
       "introduction": "This week, parents will have the chance to share how they distract their child with fun or interesting activities and discuss the importance redirecting their child's misbehaviours. There are four steps to redirecting behaviour: Be Calm, Quick, Clear, and Positive. \n\n1. **BE CALM** Speak with a calm voice.\n2. **QUICK** Distract the child before it begins or gets worse.\n3. **CLEAR** The child needs clear instructions on what to do.\n4. **POSITIVE** Praise when the child behaves!",
-      "message_1": "Today's tip is to help you misdirect your child's behaviour, especially when they are tired, scared, hungry, or learning independence.\n\n- **BE CALM** Speak to your child with a calm voice.\n- **QUICK** Distract your child before the misbehaviour begins or gets worse.\n- **CLEAR** Give your child clear instructions on what to do.\n- **POSITIVE** Praise your child when they misbehaves!",
+      "message_1": "Today's tip is to help you redirect your child's behaviour, especially when they are tired, scared, hungry, or learning independence.\n\n- **BE CALM** Speak to your child with a calm voice.\n- **QUICK** Distract your child before the misbehaviour begins or gets worse.\n- **CLEAR** Give your child clear instructions on what to do.\n- **POSITIVE** Praise your child when they misbehaves!",
       "message_2": "Why do you think it's important to distract your child with an interesting and fun activity when they misbehave?",
       "message_3": "Thank you for sharing your thoughts! This week, try to act quickly and calmly when your child misbehaves. Distract them with a simple but fun activity. Don't forget to praise them when they behave!",
       "faq_title": "Challenges Shared by Parents",
@@ -77,7 +77,7 @@
     {
       "id": "topic_5",
       "number": 5,
-      "title": "Healthy eating",
+      "title": "Healthy Eating",
       "introduction": "Parents will focus on their child's healthy eating habits this week. This session will allow parents to discuss the importance of training children to practice healthy eating habits from a young age. \n\nThe three tips that parents can follow to support their child's healthy eating habits are:  \n\n1. **PRACTISE MODERATION** Let the child enjoy a variety of food based on the recommended daily intakes.\n2. **MANAGE EMOTIONS** Redirect or ignore the child's demanding behaviour for unhealthy food.\n3. **PRIORITISE HYGIENE** Wash you hands and fresh food items before cooking. Maintain freshness of food by storing them in the fridge.",
       "message_1": "Hello parents! Today's parent tip is about encouraging your child to eat healthy and safe food. The following three tips will help your child to enjoy clean and tasty food. These tips wil also help you to manage any food-related tantrums from your child.\n\n1. **PRACTISE MODERATION** It is alright to let your child enjoy a variety of food based on the recommended daily intakes.\n2. **MANAGE EMOTIONS** When your child is demanding for unhealthy food, you can redirect or ignore their behaviours.\n3. **PRIORITISE HYGIENE** Remember to wash you hands and fresh food items before cooking. Take advantage of the fridge to maintain freshness of cooked food.",
       "message_2": "Why do you think it is important to starting teaching your child healthy eating habits from a young age?",
@@ -87,7 +87,7 @@
       "response_1": "It's great to hear that you are interested to learn about the recommended daily intake for your child! Every day, make sure your child has:\n\n🍚 2-3 servings of carbohydrates. \n1 serving could be: 2 spoons of rice, 2 slices of bread, 1 sweet potato, 1 cup of wet noodles, or 6 cream crackers.\n\n🍅 3-4 servings of fruits and vegetables. \n1 serving could be: 4 tablespoons of cooked leafy vegetables, ½ cup of other vegetables, 1 medium-sized fruit, 8 grapes, or 4 prunes.\n\n💚 1-2 servings of dairy products and protein. \n1 serving could be: 1 kembong fish, 1 slice of tenggiri fish, 1 chicken thigh, ⅔ cup of anchovies, 2 eggs, 1 cup of lentils, 2 pieces of tempeh/tofu, 1 glass of milk, 1 cup of yoghurt, or 1 slice of cheese.\n\n🚩 Just a little bit of oil, fat, processed sugar, and salt.",
       "question_2": "A parent wants to know more about healthy food habits at home so that their child can learn.",
       "response_2": "Making healthy food choices as a family is a good way to teach your child to do the same. Your child will observe and learn from the eating habits of people around them. Healthy food habits include eating more vegetables and fruits. Unhealthy food choices include oil, fat, salt, and processed sugar. On the whole, your family should consume more fresh food items instead of fast food items. Remember to enjoy a variety of food in moderation!",
-      "title_short": "Week 5: Healthy eating",
+      "title_short": "Week 5: Healthy Eating",
       "icon_asset": "images/icons/reader_blue.svg",
       "message_guidance_1": "Explain to the facilitator any relevant details, such as \"wait for parents to respond\"."
     }
