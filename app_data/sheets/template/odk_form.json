@@ -24,11 +24,43 @@
     {
       "type": "odk_form",
       "name": "form_1",
+      "action_list": [
+        {
+          "trigger": "changed",
+          "action_id": "set_field",
+          "args": [
+            "sample_odk_output",
+            "this.value"
+          ],
+          "_raw": "changed | set_field: sample_odk_output: @local.form_1",
+          "_cleaned": "changed | set_field: sample_odk_output: @local.form_1"
+        }
+      ],
       "parameter_list": {
         "form_asset": "@local.form_asset_input"
       },
       "_nested_name": "form_1",
       "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "_raw": [
+              {
+                "fullExpression": "changed | set_field: sample_odk_output: @local.form_1",
+                "matchedExpression": "@local.form_1",
+                "type": "local",
+                "fieldName": "form_1"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "changed | set_field: sample_odk_output: @local.form_1",
+                "matchedExpression": "@local.form_1",
+                "type": "local",
+                "fieldName": "form_1"
+              }
+            ]
+          }
+        },
         "parameter_list": {
           "form_asset": [
             {
@@ -41,32 +73,12 @@
         }
       },
       "_dynamicDependencies": {
+        "@local.form_1": [
+          "action_list.0._raw",
+          "action_list.0._cleaned"
+        ],
         "@local.form_asset_input": [
           "parameter_list.form_asset"
-        ]
-      }
-    },
-    {
-      "type": "text",
-      "name": "form_1_values",
-      "value": "Form values: @local.form_1",
-      "_translations": {
-        "value": {}
-      },
-      "_nested_name": "form_1_values",
-      "_dynamicFields": {
-        "value": [
-          {
-            "fullExpression": "Form values: @local.form_1",
-            "matchedExpression": "@local.form_1",
-            "type": "local",
-            "fieldName": "form_1"
-          }
-        ]
-      },
-      "_dynamicDependencies": {
-        "@local.form_1": [
-          "value"
         ]
       }
     }
