@@ -58,6 +58,22 @@
       "_translations": {
         "value": {}
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "type_prompt",
+      "value": "Tap and type",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "select_prompt",
+      "value": "Tap and select",
+      "_translations": {
+        "value": {}
+      }
     }
   ],
   "_xlsxPath": "data/navigation_data.xlsx"

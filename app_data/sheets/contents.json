@@ -215,14 +215,14 @@
       "flow_name": "message_box",
       "_xlsxPath": "templates/articles.xlsx"
     },
+    "nav_buttons": {
+      "flow_type": "template",
+      "flow_name": "nav_buttons",
+      "_xlsxPath": "templates/navigation.xlsx"
+    },
     "odk_form": {
       "flow_type": "template",
       "flow_name": "odk_form",
-      "_xlsxPath": "templates/navigation.xlsx"
-    },
-    "odk_form_en": {
-      "flow_type": "template",
-      "flow_name": "odk_form_en",
       "_xlsxPath": "templates/navigation.xlsx"
     },
     "profile": {

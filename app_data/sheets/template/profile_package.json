@@ -45,18 +45,6 @@
       "_translations": {
         "value": {}
       },
-      "action_list": [
-        {
-          "trigger": "changed",
-          "action_id": "set_field",
-          "args": [
-            "current_package",
-            "this.value"
-          ],
-          "_raw": "changed | set_field: current_package: @local.radio_button_grid",
-          "_cleaned": "changed | set_field: current_package: @local.radio_button_grid"
-        }
-      ],
       "parameter_list": {
         "answer_list": "@data.package"
       },
@@ -70,26 +58,6 @@
             "fieldName": "current_package"
           }
         ],
-        "action_list": {
-          "0": {
-            "_raw": [
-              {
-                "fullExpression": "changed | set_field: current_package: @local.radio_button_grid",
-                "matchedExpression": "@local.radio_button_grid",
-                "type": "local",
-                "fieldName": "radio_button_grid"
-              }
-            ],
-            "_cleaned": [
-              {
-                "fullExpression": "changed | set_field: current_package: @local.radio_button_grid",
-                "matchedExpression": "@local.radio_button_grid",
-                "type": "local",
-                "fieldName": "radio_button_grid"
-              }
-            ]
-          }
-        },
         "parameter_list": {
           "answer_list": [
             {
@@ -105,12 +73,75 @@
         "@fields.current_package": [
           "value"
         ],
-        "@local.radio_button_grid": [
-          "action_list.0._raw",
-          "action_list.0._cleaned"
-        ],
         "@data.package": [
           "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
+      "type": "template",
+      "name": "nav_buttons",
+      "value": "nav_buttons",
+      "action_list": [
+        {
+          "trigger": "completed",
+          "action_id": "set_field",
+          "args": [
+            "current_package",
+            "@local.radio_button_grid"
+          ],
+          "_raw": "completed | set_field: current_package: @local.radio_button_grid",
+          "_cleaned": "completed | set_field: current_package: @local.radio_button_grid"
+        },
+        {
+          "trigger": "completed",
+          "action_id": "emit",
+          "args": [
+            "completed"
+          ],
+          "_raw": "completed | emit:completed",
+          "_cleaned": "completed | emit:completed"
+        }
+      ],
+      "rows": [],
+      "_nested_name": "nav_buttons",
+      "_dynamicFields": {
+        "action_list": {
+          "0": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@local.radio_button_grid",
+                  "matchedExpression": "@local.radio_button_grid",
+                  "type": "local",
+                  "fieldName": "radio_button_grid"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "completed | set_field: current_package: @local.radio_button_grid",
+                "matchedExpression": "@local.radio_button_grid",
+                "type": "local",
+                "fieldName": "radio_button_grid"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "completed | set_field: current_package: @local.radio_button_grid",
+                "matchedExpression": "@local.radio_button_grid",
+                "type": "local",
+                "fieldName": "radio_button_grid"
+              }
+            ]
+          }
+        }
+      },
+      "_dynamicDependencies": {
+        "@local.radio_button_grid": [
+          "action_list.0.args.1",
+          "action_list.0._raw",
+          "action_list.0._cleaned"
         ]
       }
     }
