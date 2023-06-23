@@ -5,6 +5,14 @@
   "rows": [
     {
       "type": "declare_global_constant",
+      "name": "user_name_question",
+      "value": "Your name",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
       "name": "user_name_default",
       "value": "[INSERT NAME]",
       "_translations": {
@@ -15,6 +23,14 @@
       "type": "declare_field_default",
       "name": "user_name",
       "value": "@global.user_name_default",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "state_question",
+      "value": "Your state",
       "_translations": {
         "value": {}
       }
