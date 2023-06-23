@@ -85,6 +85,87 @@
           }
         },
         {
+          "name": "share_message",
+          "value": "@local.message_text",
+          "_translations": {
+            "value": {}
+          },
+          "condition": "!@local.has_disclaimer",
+          "type": "set_variable",
+          "_nested_name": "dg_box.share_message",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.message_text",
+                "matchedExpression": "@local.message_text",
+                "type": "local",
+                "fieldName": "message_text"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "!@local.has_disclaimer",
+                "matchedExpression": "!@local.has_disclaimer",
+                "type": "local",
+                "fieldName": "has_disclaimer"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.message_text": [
+              "value"
+            ],
+            "!@local.has_disclaimer": [
+              "condition"
+            ]
+          }
+        },
+        {
+          "name": "share_message",
+          "value": "@local.message_text\n\n@global.message_disclaimer",
+          "_translations": {
+            "value": {}
+          },
+          "condition": "@local.has_disclaimer",
+          "type": "set_variable",
+          "_nested_name": "dg_box.share_message",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@local.message_text\n\n@global.message_disclaimer",
+                "matchedExpression": "@local.message_text",
+                "type": "local",
+                "fieldName": "message_text"
+              },
+              {
+                "fullExpression": "@local.message_text\n\n@global.message_disclaimer",
+                "matchedExpression": "@global.message_disclaimer",
+                "type": "global",
+                "fieldName": "message_disclaimer"
+              }
+            ],
+            "condition": [
+              {
+                "fullExpression": "@local.has_disclaimer",
+                "matchedExpression": "@local.has_disclaimer",
+                "type": "local",
+                "fieldName": "has_disclaimer"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@local.message_text": [
+              "value"
+            ],
+            "@global.message_disclaimer": [
+              "value"
+            ],
+            "@local.has_disclaimer": [
+              "condition"
+            ]
+          }
+        },
+        {
           "type": "display_group",
           "name": "dg_bottom",
           "rows": [
@@ -102,11 +183,62 @@
             {
               "type": "round_button",
               "name": "button",
+              "action_list": [
+                {
+                  "trigger": "click",
+                  "action_id": "share",
+                  "args": [
+                    "text",
+                    "@local.share_message"
+                  ],
+                  "_raw": "click | share: text: @local.share_message",
+                  "_cleaned": "click | share: text: @local.share_message"
+                }
+              ],
               "parameter_list": {
                 "icon_src": "share-social",
                 "style": "dark_orange"
               },
-              "_nested_name": "dg_box.dg_bottom.button"
+              "_nested_name": "dg_box.dg_bottom.button",
+              "_dynamicFields": {
+                "action_list": {
+                  "0": {
+                    "args": {
+                      "1": [
+                        {
+                          "fullExpression": "@local.share_message",
+                          "matchedExpression": "@local.share_message",
+                          "type": "local",
+                          "fieldName": "share_message"
+                        }
+                      ]
+                    },
+                    "_raw": [
+                      {
+                        "fullExpression": "click | share: text: @local.share_message",
+                        "matchedExpression": "@local.share_message",
+                        "type": "local",
+                        "fieldName": "share_message"
+                      }
+                    ],
+                    "_cleaned": [
+                      {
+                        "fullExpression": "click | share: text: @local.share_message",
+                        "matchedExpression": "@local.share_message",
+                        "type": "local",
+                        "fieldName": "share_message"
+                      }
+                    ]
+                  }
+                }
+              },
+              "_dynamicDependencies": {
+                "@local.share_message": [
+                  "action_list.0.args.1",
+                  "action_list.0._raw",
+                  "action_list.0._cleaned"
+                ]
+              }
             }
           ],
           "_nested_name": "dg_box.dg_bottom"
