@@ -36,22 +36,6 @@
       }
     },
     {
-      "type": "declare_global_constant",
-      "name": "user_name_default",
-      "value": "[INSERT NAME]",
-      "_translations": {
-        "value": {}
-      }
-    },
-    {
-      "type": "declare_field_default",
-      "name": "user_name",
-      "value": "@global.user_name_default",
-      "_translations": {
-        "value": {}
-      }
-    },
-    {
       "type": "declare_field_default",
       "name": "current_package",
       "value": "facilitator",

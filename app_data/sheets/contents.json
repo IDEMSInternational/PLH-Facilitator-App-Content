@@ -36,6 +36,11 @@
       "flow_name": "profile_section_data",
       "data_list_name": "profile_section",
       "_xlsxPath": "data/profile_data.xlsx"
+    },
+    "state_data_my": {
+      "flow_type": "data_list",
+      "flow_name": "state_data_my",
+      "_xlsxPath": "data/profile_data.xlsx"
     }
   },
   "data_pipe": {},

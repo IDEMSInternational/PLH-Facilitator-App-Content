@@ -32,11 +32,26 @@
     {
       "type": "text",
       "name": "text_user_name",
-      "value": "Your name",
+      "value": "@global.user_name_question",
       "_translations": {
         "value": {}
       },
-      "_nested_name": "text_user_name"
+      "_nested_name": "text_user_name",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.user_name_question",
+            "matchedExpression": "@global.user_name_question",
+            "type": "global",
+            "fieldName": "user_name_question"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.user_name_question": [
+          "value"
+        ]
+      }
     },
     {
       "name": "user_name",
@@ -168,6 +183,82 @@
       }
     },
     {
+      "type": "text",
+      "name": "text_state",
+      "value": "@global.state_question",
+      "_translations": {
+        "value": {}
+      },
+      "_nested_name": "text_state",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@global.state_question",
+            "matchedExpression": "@global.state_question",
+            "type": "global",
+            "fieldName": "state_question"
+          }
+        ]
+      },
+      "_dynamicDependencies": {
+        "@global.state_question": [
+          "value"
+        ]
+      }
+    },
+    {
+      "type": "radio_button_grid",
+      "name": "user_state",
+      "value": "@fields.user_state",
+      "_translations": {
+        "value": {}
+      },
+      "condition": "changed | set_field: user_state: @local.user_state",
+      "parameter_list": {
+        "answer_list": "@data.state_data_my"
+      },
+      "_nested_name": "user_state",
+      "_dynamicFields": {
+        "value": [
+          {
+            "fullExpression": "@fields.user_state",
+            "matchedExpression": "@fields.user_state",
+            "type": "fields",
+            "fieldName": "user_state"
+          }
+        ],
+        "condition": [
+          {
+            "fullExpression": "changed | set_field: user_state: @local.user_state",
+            "matchedExpression": "@local.user_state",
+            "type": "local",
+            "fieldName": "user_state"
+          }
+        ],
+        "parameter_list": {
+          "answer_list": [
+            {
+              "fullExpression": "@data.state_data_my",
+              "matchedExpression": "@data.state_data_my",
+              "type": "data",
+              "fieldName": "state_data_my"
+            }
+          ]
+        }
+      },
+      "_dynamicDependencies": {
+        "@fields.user_state": [
+          "value"
+        ],
+        "@local.user_state": [
+          "condition"
+        ],
+        "@data.state_data_my": [
+          "parameter_list.answer_list"
+        ]
+      }
+    },
+    {
       "type": "template",
       "name": "nav_buttons",
       "value": "nav_buttons",
@@ -191,6 +282,26 @@
           ],
           "_raw": "uncompleted | set_field: user_name:`@global.user_name_default`",
           "_cleaned": "uncompleted | set_field: user_name:`@global.user_name_default`"
+        },
+        {
+          "trigger": "completed",
+          "action_id": "set_field",
+          "args": [
+            "user_state",
+            "@local.user_state"
+          ],
+          "_raw": "completed | set_field: user_state: @local.user_state",
+          "_cleaned": "completed | set_field: user_state: @local.user_state"
+        },
+        {
+          "trigger": "uncompleted",
+          "action_id": "set_field",
+          "args": [
+            "user_state",
+            "@local.user_state"
+          ],
+          "_raw": "uncompleted | set_field: user_state: @local.user_state",
+          "_cleaned": "uncompleted | set_field: user_state: @local.user_state"
         },
         {
           "trigger": "completed",
@@ -271,6 +382,62 @@
                 "fieldName": "user_name_default"
               }
             ]
+          },
+          "2": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@local.user_state",
+                  "matchedExpression": "@local.user_state",
+                  "type": "local",
+                  "fieldName": "user_state"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "completed | set_field: user_state: @local.user_state",
+                "matchedExpression": "@local.user_state",
+                "type": "local",
+                "fieldName": "user_state"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "completed | set_field: user_state: @local.user_state",
+                "matchedExpression": "@local.user_state",
+                "type": "local",
+                "fieldName": "user_state"
+              }
+            ]
+          },
+          "3": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@local.user_state",
+                  "matchedExpression": "@local.user_state",
+                  "type": "local",
+                  "fieldName": "user_state"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "uncompleted | set_field: user_state: @local.user_state",
+                "matchedExpression": "@local.user_state",
+                "type": "local",
+                "fieldName": "user_state"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "uncompleted | set_field: user_state: @local.user_state",
+                "matchedExpression": "@local.user_state",
+                "type": "local",
+                "fieldName": "user_state"
+              }
+            ]
           }
         },
         "condition": [
@@ -290,6 +457,14 @@
           "action_list.1.args.1",
           "action_list.1._raw",
           "action_list.1._cleaned"
+        ],
+        "@local.user_state": [
+          "action_list.2.args.1",
+          "action_list.2._raw",
+          "action_list.2._cleaned",
+          "action_list.3.args.1",
+          "action_list.3._raw",
+          "action_list.3._cleaned"
         ],
         "!@local.text_box": [
           "condition"
@@ -320,6 +495,26 @@
           ],
           "_raw": "uncompleted | set_field: user_name: @local.text_box",
           "_cleaned": "uncompleted | set_field: user_name: @local.text_box"
+        },
+        {
+          "trigger": "completed",
+          "action_id": "set_field",
+          "args": [
+            "user_state",
+            "@local.user_state"
+          ],
+          "_raw": "completed | set_field: user_state: @local.user_state",
+          "_cleaned": "completed | set_field: user_state: @local.user_state"
+        },
+        {
+          "trigger": "uncompleted",
+          "action_id": "set_field",
+          "args": [
+            "user_state",
+            "@local.user_state"
+          ],
+          "_raw": "uncompleted | set_field: user_state: @local.user_state",
+          "_cleaned": "uncompleted | set_field: user_state: @local.user_state"
         },
         {
           "trigger": "completed",
@@ -400,6 +595,62 @@
                 "fieldName": "text_box"
               }
             ]
+          },
+          "2": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@local.user_state",
+                  "matchedExpression": "@local.user_state",
+                  "type": "local",
+                  "fieldName": "user_state"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "completed | set_field: user_state: @local.user_state",
+                "matchedExpression": "@local.user_state",
+                "type": "local",
+                "fieldName": "user_state"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "completed | set_field: user_state: @local.user_state",
+                "matchedExpression": "@local.user_state",
+                "type": "local",
+                "fieldName": "user_state"
+              }
+            ]
+          },
+          "3": {
+            "args": {
+              "1": [
+                {
+                  "fullExpression": "@local.user_state",
+                  "matchedExpression": "@local.user_state",
+                  "type": "local",
+                  "fieldName": "user_state"
+                }
+              ]
+            },
+            "_raw": [
+              {
+                "fullExpression": "uncompleted | set_field: user_state: @local.user_state",
+                "matchedExpression": "@local.user_state",
+                "type": "local",
+                "fieldName": "user_state"
+              }
+            ],
+            "_cleaned": [
+              {
+                "fullExpression": "uncompleted | set_field: user_state: @local.user_state",
+                "matchedExpression": "@local.user_state",
+                "type": "local",
+                "fieldName": "user_state"
+              }
+            ]
           }
         },
         "condition": [
@@ -420,6 +671,14 @@
           "action_list.1._raw",
           "action_list.1._cleaned",
           "condition"
+        ],
+        "@local.user_state": [
+          "action_list.2.args.1",
+          "action_list.2._raw",
+          "action_list.2._cleaned",
+          "action_list.3.args.1",
+          "action_list.3._raw",
+          "action_list.3._cleaned"
         ]
       }
     }
