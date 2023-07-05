@@ -207,7 +207,7 @@
       }
     },
     {
-      "type": "radio_button_grid",
+      "type": "combo_box",
       "name": "user_state",
       "value": "@fields.user_state",
       "_translations": {
@@ -215,7 +215,8 @@
       },
       "condition": "changed | set_field: user_state: @local.user_state",
       "parameter_list": {
-        "answer_list": "@data.state_data_my"
+        "answer_list": "@data.state_data_my",
+        "placeholder": "@global.select_prompt"
       },
       "_nested_name": "user_state",
       "_dynamicFields": {
@@ -243,6 +244,14 @@
               "type": "data",
               "fieldName": "state_data_my"
             }
+          ],
+          "placeholder": [
+            {
+              "fullExpression": "@global.select_prompt",
+              "matchedExpression": "@global.select_prompt",
+              "type": "global",
+              "fieldName": "select_prompt"
+            }
           ]
         }
       },
@@ -255,6 +264,9 @@
         ],
         "@data.state_data_my": [
           "parameter_list.answer_list"
+        ],
+        "@global.select_prompt": [
+          "parameter_list.placeholder"
         ]
       }
     },
