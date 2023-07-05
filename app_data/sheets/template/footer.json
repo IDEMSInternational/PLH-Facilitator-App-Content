@@ -81,10 +81,10 @@
     },
     {
       "type": "navigation_bar",
+      "name": "navigation_bar",
       "parameter_list": {
         "button_list": "@local.button_list"
       },
-      "name": "navigation_bar",
       "_nested_name": "navigation_bar",
       "_dynamicFields": {
         "parameter_list": {

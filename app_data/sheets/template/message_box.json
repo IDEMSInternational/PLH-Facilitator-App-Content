@@ -188,11 +188,10 @@
                   "trigger": "click",
                   "action_id": "share",
                   "args": [
-                    "text",
                     "@local.share_message"
                   ],
-                  "_raw": "click | share: text: @local.share_message",
-                  "_cleaned": "click | share: text: @local.share_message"
+                  "_raw": "click | share: @local.share_message",
+                  "_cleaned": "click | share: @local.share_message"
                 }
               ],
               "parameter_list": {
@@ -204,7 +203,7 @@
                 "action_list": {
                   "0": {
                     "args": {
-                      "1": [
+                      "0": [
                         {
                           "fullExpression": "@local.share_message",
                           "matchedExpression": "@local.share_message",
@@ -215,7 +214,7 @@
                     },
                     "_raw": [
                       {
-                        "fullExpression": "click | share: text: @local.share_message",
+                        "fullExpression": "click | share: @local.share_message",
                         "matchedExpression": "@local.share_message",
                         "type": "local",
                         "fieldName": "share_message"
@@ -223,7 +222,7 @@
                     ],
                     "_cleaned": [
                       {
-                        "fullExpression": "click | share: text: @local.share_message",
+                        "fullExpression": "click | share: @local.share_message",
                         "matchedExpression": "@local.share_message",
                         "type": "local",
                         "fieldName": "share_message"
@@ -234,7 +233,7 @@
               },
               "_dynamicDependencies": {
                 "@local.share_message": [
-                  "action_list.0.args.1",
+                  "action_list.0.args.0",
                   "action_list.0._raw",
                   "action_list.0._cleaned"
                 ]
