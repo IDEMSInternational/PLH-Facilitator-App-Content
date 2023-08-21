@@ -66,6 +66,22 @@
       "_translations": {
         "value": {}
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "faq_title",
+      "value": "Frequently asked questions",
+      "_translations": {
+        "value": {}
+      }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "faq_icon",
+      "value": "images/icons/women speaking.svg",
+      "_translations": {
+        "value": {}
+      }
     }
   ],
   "_xlsxPath": "data/article_data.xlsx"

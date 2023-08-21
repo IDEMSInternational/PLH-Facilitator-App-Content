@@ -52,6 +52,9 @@
             }
           ],
           "condition": "@item.id != \"groups\"",
+          "parameter_list": {
+            "style": "card"
+          },
           "_nested_name": "items.button_@item.id",
           "_dynamicFields": {
             "name": [

@@ -12,6 +12,7 @@
       "faq_title": "Safeguarding Guidelines",
       "title_short": "Week 0: Safeguarding Information",
       "icon_asset": "images/icons/women and girl with phone.svg",
+      "message_title": "@global.message_title",
       "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
       "media_title": "This is media",
       "media_icon": "images/icons/reader_blue.svg"
@@ -27,6 +28,7 @@
       "faq_title": "Support",
       "title_short": "Week 1: Introductions",
       "icon_asset": "images/icons/women and girl with phone.svg",
+      "message_title": "@global.message_title",
       "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
       "media_title": "This is media",
       "media_icon": "images/icons/reader_blue.svg"
@@ -42,6 +44,7 @@
       "faq_title": "Responding to Parents",
       "title_short": "Week 2: One-on-One Time",
       "icon_asset": "images/icons/women and girl with phone.svg",
+      "message_title": "@global.message_title",
       "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
       "media_title": "This is media",
       "media_icon": "images/icons/reader_blue.svg"
@@ -57,6 +60,7 @@
       "faq_title": "Key Issues to Be Aware Of",
       "title_short": "Week 3: Sharing Emotions",
       "icon_asset": "images/icons/women and girl with phone.svg",
+      "message_title": "@global.message_title",
       "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
       "media_title": "This is media",
       "media_icon": "images/icons/reader_blue.svg"
@@ -72,6 +76,7 @@
       "faq_title": "Issues shared by parenting about learning",
       "title_short": "Week 4: Children’s learning",
       "icon_asset": "images/icons/women and girl with phone.svg",
+      "message_title": "@global.message_title",
       "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
       "media_title": "This is media",
       "media_icon": "images/icons/reader_blue.svg"
@@ -87,6 +92,7 @@
       "faq_title": "Food Choices & Decisions at Home",
       "title_short": "Week 5: Healthy Eating",
       "icon_asset": "images/icons/women and girl with phone.svg",
+      "message_title": "@global.message_title",
       "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
       "media_title": "This is media",
       "media_icon": "images/icons/reader_blue.svg"
@@ -102,6 +108,7 @@
       "faq_title": "Issues shared by parents",
       "title_short": "Week 6: Family Relationships",
       "icon_asset": "images/icons/women and girl with phone.svg",
+      "message_title": "@global.message_title",
       "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
       "media_title": "This is media",
       "media_icon": "images/icons/reader_blue.svg"

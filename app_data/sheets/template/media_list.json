@@ -144,75 +144,184 @@
       "value": "@data.media",
       "rows": [
         {
-          "type": "button",
-          "name": "button_@item.id",
-          "value": "@item.title_short",
-          "_translations": {
-            "value": {}
-          },
+          "type": "display_group",
+          "name": "dg_media",
           "parameter_list": {
-            "style": "card"
+            "style": "column"
           },
-          "action_list": [
-            {
-              "trigger": "click",
-              "action_id": "go_to",
-              "args": [
-                "media_@item.id"
-              ],
-              "_raw": "click | go_to: media_@item.id",
-              "_cleaned": "click | go_to: media_@item.id"
-            }
-          ],
           "condition": "@item.foreign_id == @local.article_data.id",
-          "_nested_name": "items.button_@item.id",
-          "_dynamicFields": {
-            "name": [
-              {
-                "fullExpression": "button_@item.id",
-                "matchedExpression": "@item.id",
-                "type": "item",
-                "fieldName": "id"
-              }
-            ],
-            "value": [
-              {
-                "fullExpression": "@item.title_short",
-                "matchedExpression": "@item.title_short",
-                "type": "item",
-                "fieldName": "title_short"
-              }
-            ],
-            "action_list": {
-              "0": {
-                "args": {
-                  "0": [
-                    {
-                      "fullExpression": "media_@item.id",
-                      "matchedExpression": "@item.id",
-                      "type": "item",
-                      "fieldName": "id"
-                    }
-                  ]
-                },
-                "_raw": [
+          "rows": [
+            {
+              "name": "media_source",
+              "value": "@item.media_asset",
+              "_translations": {
+                "value": {}
+              },
+              "type": "set_variable",
+              "_nested_name": "items.dg_media.media_source",
+              "_dynamicFields": {
+                "value": [
                   {
-                    "fullExpression": "click | go_to: media_@item.id",
+                    "fullExpression": "@item.media_asset",
+                    "matchedExpression": "@item.media_asset",
+                    "type": "item",
+                    "fieldName": "media_asset"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.media_asset": [
+                  "value"
+                ]
+              }
+            },
+            {
+              "type": "video",
+              "name": "video@item.id",
+              "value": "@local.media_source",
+              "_translations": {
+                "value": {}
+              },
+              "parameter_list": {
+                "title": "@item.title"
+              },
+              "condition": "@item.type == \"video\"",
+              "_nested_name": "items.dg_media.video@item.id",
+              "_dynamicFields": {
+                "name": [
+                  {
+                    "fullExpression": "video@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
                   }
                 ],
-                "_cleaned": [
+                "value": [
                   {
-                    "fullExpression": "click | go_to: media_@item.id",
+                    "fullExpression": "@local.media_source",
+                    "matchedExpression": "@local.media_source",
+                    "type": "local",
+                    "fieldName": "media_source"
+                  }
+                ],
+                "parameter_list": {
+                  "title": [
+                    {
+                      "fullExpression": "@item.title",
+                      "matchedExpression": "@item.title",
+                      "type": "item",
+                      "fieldName": "title"
+                    }
+                  ]
+                },
+                "condition": [
+                  {
+                    "fullExpression": "@item.type == \"video\"",
+                    "matchedExpression": "@item.type",
+                    "type": "item",
+                    "fieldName": "type"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "items.dg_media.video@item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
                   }
                 ]
+              },
+              "_dynamicDependencies": {
+                "@item.id": [
+                  "name",
+                  "_nested_name"
+                ],
+                "@local.media_source": [
+                  "value"
+                ],
+                "@item.title": [
+                  "parameter_list.title"
+                ],
+                "@item.type": [
+                  "condition"
+                ]
               }
             },
+            {
+              "type": "audio",
+              "name": "audio@item.id",
+              "value": "@local.media_source",
+              "_translations": {
+                "value": {}
+              },
+              "parameter_list": {
+                "title": "@item.title"
+              },
+              "condition": "@item.type == \"audio\"",
+              "_nested_name": "items.dg_media.audio@item.id",
+              "_dynamicFields": {
+                "name": [
+                  {
+                    "fullExpression": "audio@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ],
+                "value": [
+                  {
+                    "fullExpression": "@local.media_source",
+                    "matchedExpression": "@local.media_source",
+                    "type": "local",
+                    "fieldName": "media_source"
+                  }
+                ],
+                "parameter_list": {
+                  "title": [
+                    {
+                      "fullExpression": "@item.title",
+                      "matchedExpression": "@item.title",
+                      "type": "item",
+                      "fieldName": "title"
+                    }
+                  ]
+                },
+                "condition": [
+                  {
+                    "fullExpression": "@item.type == \"audio\"",
+                    "matchedExpression": "@item.type",
+                    "type": "item",
+                    "fieldName": "type"
+                  }
+                ],
+                "_nested_name": [
+                  {
+                    "fullExpression": "items.dg_media.audio@item.id",
+                    "matchedExpression": "@item.id",
+                    "type": "item",
+                    "fieldName": "id"
+                  }
+                ]
+              },
+              "_dynamicDependencies": {
+                "@item.id": [
+                  "name",
+                  "_nested_name"
+                ],
+                "@local.media_source": [
+                  "value"
+                ],
+                "@item.title": [
+                  "parameter_list.title"
+                ],
+                "@item.type": [
+                  "condition"
+                ]
+              }
+            }
+          ],
+          "_nested_name": "items.dg_media",
+          "_dynamicFields": {
             "condition": [
               {
                 "fullExpression": "@item.foreign_id == @local.article_data.id",
@@ -226,27 +335,9 @@
                 "type": "local",
                 "fieldName": "article_data"
               }
-            ],
-            "_nested_name": [
-              {
-                "fullExpression": "items.button_@item.id",
-                "matchedExpression": "@item.id",
-                "type": "item",
-                "fieldName": "id"
-              }
             ]
           },
           "_dynamicDependencies": {
-            "@item.id": [
-              "name",
-              "action_list.0.args.0",
-              "action_list.0._raw",
-              "action_list.0._cleaned",
-              "_nested_name"
-            ],
-            "@item.title_short": [
-              "value"
-            ],
             "@item.foreign_id": [
               "condition"
             ],

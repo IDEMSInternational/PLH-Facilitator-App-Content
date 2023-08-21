@@ -4,30 +4,65 @@
   "status": "released",
   "rows": [
     {
-      "type": "template",
-      "name": "section_header",
-      "value": "section_header",
+      "type": "display_group",
+      "name": "dg_header",
       "rows": [
         {
-          "name": "section_id",
-          "value": "faq",
+          "type": "title",
+          "name": "title",
+          "value": "@global.faq_title",
           "_translations": {
             "value": {}
           },
-          "type": "set_variable",
-          "_nested_name": "section_header.section_id"
+          "style_list": [
+            "flex:5"
+          ],
+          "_nested_name": "dg_header.title",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.faq_title",
+                "matchedExpression": "@global.faq_title",
+                "type": "global",
+                "fieldName": "faq_title"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@global.faq_title": [
+              "value"
+            ]
+          }
         },
         {
-          "name": "section_data",
-          "value": "app_section",
+          "type": "image",
+          "name": "icon_asset",
+          "value": "@global.faq_icon",
           "_translations": {
             "value": {}
           },
-          "type": "set_variable",
-          "_nested_name": "section_header.section_data"
+          "style_list": [
+            "flex:1"
+          ],
+          "_nested_name": "dg_header.icon_asset",
+          "_dynamicFields": {
+            "value": [
+              {
+                "fullExpression": "@global.faq_icon",
+                "matchedExpression": "@global.faq_icon",
+                "type": "global",
+                "fieldName": "faq_icon"
+              }
+            ]
+          },
+          "_dynamicDependencies": {
+            "@global.faq_icon": [
+              "value"
+            ]
+          }
         }
       ],
-      "_nested_name": "section_header"
+      "_nested_name": "dg_header"
     },
     {
       "type": "items",
@@ -51,6 +86,9 @@
               "_cleaned": "click | go_to: faq_@item.id"
             }
           ],
+          "parameter_list": {
+            "style": "card"
+          },
           "_nested_name": "items.button_@item.id",
           "_dynamicFields": {
             "name": [

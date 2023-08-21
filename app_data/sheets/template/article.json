@@ -522,7 +522,7 @@
             },
             {
               "name": "title",
-              "value": "@global.message_title @item.id",
+              "value": "@local.article_data.message_title @item.id",
               "_translations": {
                 "value": {}
               },
@@ -531,13 +531,13 @@
               "_dynamicFields": {
                 "value": [
                   {
-                    "fullExpression": "@global.message_title @item.id",
-                    "matchedExpression": "@global.message_title",
-                    "type": "global",
-                    "fieldName": "message_title"
+                    "fullExpression": "@local.article_data.message_title @item.id",
+                    "matchedExpression": "@local.article_data.message_title",
+                    "type": "local",
+                    "fieldName": "article_data"
                   },
                   {
-                    "fullExpression": "@global.message_title @item.id",
+                    "fullExpression": "@local.article_data.message_title @item.id",
                     "matchedExpression": "@item.id",
                     "type": "item",
                     "fieldName": "id"
@@ -553,7 +553,7 @@
                 ]
               },
               "_dynamicDependencies": {
-                "@global.message_title": [
+                "@local.article_data.message_title": [
                   "value"
                 ],
                 "@item.id": [
