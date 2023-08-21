@@ -1,0 +1,39 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "media_data",
+  "status": "released",
+  "data_list_name": "media",
+  "rows": [
+    {
+      "id": "media_1",
+      "number": 1,
+      "foreign_id": "topic_1",
+      "type": "video",
+      "title": "Question 1",
+      "introduction": "This is a video",
+      "title_short": "video : Question 1",
+      "icon_asset": "images/icons/reader_blue.svg"
+    },
+    {
+      "id": "media_2",
+      "number": 2,
+      "foreign_id": "question_1",
+      "type": "audio",
+      "title": "Question 2",
+      "introduction": "This is a audio file",
+      "title_short": "audio : Question 2",
+      "icon_asset": "images/icons/reader_blue.svg"
+    },
+    {
+      "id": "media_3",
+      "number": 3,
+      "foreign_id": "article_question_1",
+      "type": "video",
+      "title": "Question 3",
+      "introduction": "This is a audio file",
+      "title_short": "video : Question 3",
+      "icon_asset": "images/icons/reader_blue.svg"
+    }
+  ],
+  "_xlsxPath": "data/article_data.xlsx"
+}

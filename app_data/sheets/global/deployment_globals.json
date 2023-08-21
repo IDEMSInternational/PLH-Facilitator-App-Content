@@ -1,0 +1,26 @@
+{
+  "flow_type": "global",
+  "flow_name": "deployment_globals",
+  "status": "released",
+  "rows": [
+    {
+      "type": "declare_global_constant",
+      "name": "article",
+      "value": "article",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "article_data",
+      "value": "article_data",
+      "_translations": {
+        "value": {}
+      },
+      "exclude_from_translation": true
+    }
+  ],
+  "_xlsxPath": "data/Globals.xlsx"
+}

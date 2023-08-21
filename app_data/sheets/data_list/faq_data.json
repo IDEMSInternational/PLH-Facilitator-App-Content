@@ -1,0 +1,33 @@
+{
+  "flow_type": "data_list",
+  "flow_name": "faq_data",
+  "status": "released",
+  "data_list_name": "faq",
+  "rows": [
+    {
+      "id": "question_1",
+      "number": 1,
+      "title": "this is Question 1",
+      "introduction": "This is a question",
+      "message_1": "This may be the question",
+      "message_guidance_1": "and this may be the answer but it may be all done in the first bit of the page",
+      "title_short": "FAQ: this is Question 1",
+      "icon_asset": "images/icons/reader_blue.svg",
+      "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
+      "media_title": "This is media",
+      "media_icon": "images/icons/reader_blue.svg"
+    },
+    {
+      "id": "question_2",
+      "number": 2,
+      "title": "this is Question 2",
+      "introduction": "So is this",
+      "title_short": "FAQ: this is Question 2",
+      "icon_asset": "images/icons/reader_blue.svg",
+      "attached_single_doc": "https://docs.google.com/document/d/1LtPkcVUkDhQtfv-KpokwnBCflhw8poFVlBD6pcu_t_4",
+      "media_title": "This is media",
+      "media_icon": "images/icons/reader_blue.svg"
+    }
+  ],
+  "_xlsxPath": "data/article_data.xlsx"
+}
