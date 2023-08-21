@@ -22,5 +22,5 @@
       "exclude_from_translation": true
     }
   ],
-  "_xlsxPath": "data/Globals.xlsx"
+  "_xlsxPath": "data/globals.xlsx"
 }
