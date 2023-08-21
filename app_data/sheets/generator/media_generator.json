@@ -1,25 +1,25 @@
 {
   "flow_type": "generator",
-  "flow_name": "article_generator",
+  "flow_name": "media_generator",
   "status": "released",
   "parameter_list": {
-    "input_data_list": "article_data",
-    "output_flow_name": "article_@gen.id",
+    "input_data_list": "media_data",
+    "output_flow_name": "media_@gen.id",
     "output_flow_type": "template",
     "output_flow_subtype": "generated"
   },
   "rows": [
     {
       "type": "template",
-      "name": "article",
-      "value": "article",
+      "name": "media",
+      "value": "media",
       "rows": [
         {
           "name": "data",
-          "value": "article"
+          "value": "media"
         },
         {
-          "name": "article_id",
+          "name": "media_id",
           "value": "@gen.id"
         }
       ]

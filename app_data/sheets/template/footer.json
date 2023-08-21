@@ -8,6 +8,7 @@
       "value": [
         "image: @data.app_section.data_collection.icon_asset | target_template: @data.app_section.data_collection.template",
         "image: @data.app_section.manual.icon_asset | target_template: @data.app_section.manual.template",
+        "image: @data.app_section.library.icon_asset | target_template: @data.app_section.library.template",
         "image: @data.app_section.profile.icon_asset | target_template: @data.app_section.profile.template"
       ],
       "type": "set_variable",
@@ -44,6 +45,20 @@
           ],
           "2": [
             {
+              "fullExpression": "image: @data.app_section.library.icon_asset | target_template: @data.app_section.library.template",
+              "matchedExpression": "@data.app_section.library.icon_asset",
+              "type": "data",
+              "fieldName": "app_section"
+            },
+            {
+              "fullExpression": "image: @data.app_section.library.icon_asset | target_template: @data.app_section.library.template",
+              "matchedExpression": "@data.app_section.library.template",
+              "type": "data",
+              "fieldName": "app_section"
+            }
+          ],
+          "3": [
+            {
               "fullExpression": "image: @data.app_section.profile.icon_asset | target_template: @data.app_section.profile.template",
               "matchedExpression": "@data.app_section.profile.icon_asset",
               "type": "data",
@@ -71,11 +86,17 @@
         "@data.app_section.manual.template": [
           "value.1"
         ],
-        "@data.app_section.profile.icon_asset": [
+        "@data.app_section.library.icon_asset": [
           "value.2"
         ],
-        "@data.app_section.profile.template": [
+        "@data.app_section.library.template": [
           "value.2"
+        ],
+        "@data.app_section.profile.icon_asset": [
+          "value.3"
+        ],
+        "@data.app_section.profile.template": [
+          "value.3"
         ]
       }
     },
