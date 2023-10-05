@@ -6,10 +6,14 @@
     {
       "type": "declare_global_constant",
       "name": "app_name",
-      "value": "KEMAS FacilitatorApp",
+      "value": "FacilitatorApp",
       "_translations": {
         "value": {}
       }
+    },
+    {
+      "type": "declare_global_constant",
+      "name": "app_icon_asset"
     },
     {
       "type": "declare_global_constant",

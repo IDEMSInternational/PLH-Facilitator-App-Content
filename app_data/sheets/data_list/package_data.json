@@ -7,22 +7,17 @@
     {
       "id": "facilitator",
       "name": "facilitator",
-      "text": "KEMAS Preschool - Teacher"
+      "text": "Facilitator"
     },
     {
       "id": "coach",
       "name": "coach",
-      "text": "KEMAS Preschool - Supervisor"
+      "text": "Coach"
     },
     {
       "id": "parent_child",
       "name": "parent_child",
-      "text": "NGO Preschool - Facilitator"
-    },
-    {
-      "id": "parent_teen",
-      "name": "parent_teen",
-      "text": "LPPKN - Facilitator"
+      "text": "Supervisor"
     }
   ],
   "_xlsxPath": "data/navigation_data.xlsx"
