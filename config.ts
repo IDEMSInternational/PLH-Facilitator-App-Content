@@ -1,11 +1,6 @@
 import { generateDeploymentConfig } from "scripts";
 const config = generateDeploymentConfig("plh_facilitator");
 
-/**
- * The default config should ideally be a superset of any extended configs
- * to allow for easier post-processing
- */
-
 config.google_drive = {
   sheets_folder_ids: ["1k8zJfBeOm18gYDsk0XmdUm7OFtZDUY9R"],
   assets_folder_ids: ["1KcHDI7O4o2_FZ_YlXsz-8OqN3ehsfdVf"],
@@ -31,6 +26,7 @@ config.app_config.APP_THEMES.available = ["default", "professional"];
 config.app_config.APP_UPDATES.enabled = true;
 config.app_config.APP_UPDATES.completeUpdateTemplate = "app_update_complete";
 config.app_config.APP_FOOTER_DEFAULTS.templateName = "footer";
+
 config.error_logging = { dsn: "https://d833ed6883e0415caa2f166434ad8c13@app.glitchtip.com/5663"};
 
 export default config;
